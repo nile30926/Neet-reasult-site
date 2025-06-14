@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NEET UG 2024 Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f8f8f8;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 280px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #resultImage {
+      display: none;
+      margin-top: 30px;
+      width: 90%;
+      max-width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <h1>NEET (UG) 2024 - View Result</h1>
+  <input type="text" placeholder="Application Number" id="appNo" /><br>
+  <input type="text" placeholder="Mother's Name" id="momName" /><br>
+  <button onclick="showResult()">Submit</button>
+
+  <br><img id="resultImage" src="result.jpg" alt="NEET Scorecard" />
+
+  <script>
+    function showResult() {
+      let app = document.getElementById('appNo').value.trim();
+      let mom = document.getElementById('momName').value.trim();
+      if(app && mom) {
+        document.getElementById('appNo').value = '';
+        document.getElementById('momName').value = '';
+        document.getElementById('resultImage').style.display = 'block';
+      } else {
+        alert("Please enter both details!");
+      }
+    }
+  </script>
+</body>
+</html>
